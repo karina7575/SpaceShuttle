@@ -1,0 +1,5 @@
+number_experiment;fuel_stage_one;fuel_stage_two;fuel_stage_three;result
+1;100000;20000;5000;false
+1;100000;20000;5000;true
+1;90000;85000;7000;true
+1;100000;70000;5000;false
