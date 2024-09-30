@@ -34,15 +34,11 @@ public class SpaceShuttle {
         capsule.getCosmonaut().phrase();
     }
 
-    public Rocket getRocket() {
-        return rocket;
-    }
-
-    public Capsule getSpacecraft() {
-        return capsule;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public Cosmonaut getCosmonaut() {
+        return capsule.getCosmonaut();
     }
 }

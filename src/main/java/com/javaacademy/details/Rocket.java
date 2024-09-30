@@ -20,9 +20,13 @@ public class Rocket {
      * Запуск ракеты носителя
      */
     public void run() {
-        firstStage.start();
-        secondStage.start();
-        thirdStage.start();
+        try {
+            firstStage.start();
+            secondStage.start();
+            thirdStage.start();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public Engine getFirstStage() {

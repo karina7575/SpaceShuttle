@@ -35,6 +35,7 @@ public class SpaceShuttleLauncher {
         JamTube jamTube = new JamTube();
         OxygenBalloon oxygenBalloon = new OxygenBalloon();
         Capsule capsule = new Capsule(water, jamTube, oxygenBalloon);
+
         SpaceShuttle spaceShuttle = new SpaceShuttle("Восток", rocket, capsule);
         Cosmonaut cosmonaut = new Cosmonaut("Юрий Гагарин");
         spaceShuttle.setCosmonaut(cosmonaut);

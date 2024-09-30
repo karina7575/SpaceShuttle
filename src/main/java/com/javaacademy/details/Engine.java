@@ -22,7 +22,11 @@ public class Engine {
         currentFuel = 0;
     }
 
-    public void setCurrentFuel(double currentFuel) {
-        this.currentFuel = currentFuel;
+
+    /**
+     * Дозаправка
+     */
+    public void refuel(double currentFuel) {
+        this.currentFuel += currentFuel;
     }
 }
