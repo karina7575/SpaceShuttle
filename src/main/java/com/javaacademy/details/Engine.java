@@ -1,6 +1,7 @@
 package com.javaacademy.details;
 
 import com.javaacademy.exceptions.LimitFuelException;
+import com.javaacademy.exceptions.NotEnoughFuelException;
 
 /**
  * Двигатель космического корабля
@@ -24,8 +25,12 @@ public class Engine {
     /**
      * Запуск двигателя
      */
-    public void start() {
-        currentFuel = 0;
+    public void start() throws NotEnoughFuelException {
+        if (this.currentFuel < MINIMUM_FUEL_FOR_START) {
+            throw new NotEnoughFuelException();
+        } else {
+            currentFuel = 0;
+        }
     }
 
 
