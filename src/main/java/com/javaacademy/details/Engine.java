@@ -1,5 +1,7 @@
 package com.javaacademy.details;
 
+import com.javaacademy.exceptions.LimitFuelException;
+
 /**
  * Двигатель космического корабля
  */
@@ -11,8 +13,12 @@ public class Engine {
     //Текущее количество топлива в двигателе
     private double currentFuel;
 
-    public Engine(double currentFuel) {
-        this.currentFuel = currentFuel;
+    public Engine(double currentFuel) throws LimitFuelException {
+        if (currentFuel > MAX_FUEL) {
+            throw new LimitFuelException();
+        } else {
+            this.currentFuel = currentFuel;
+        }
     }
 
     /**
@@ -26,7 +32,11 @@ public class Engine {
     /**
      * Дозаправка
      */
-    public void refuel(double currentFuel) {
-        this.currentFuel += currentFuel;
+    public void refuel(double currentFuel) throws LimitFuelException {
+        if (this.currentFuel + currentFuel > MAX_FUEL) {
+            throw new LimitFuelException();
+        } else {
+            this.currentFuel += currentFuel;
+        }
     }
 }
